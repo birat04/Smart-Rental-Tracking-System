@@ -17,7 +17,7 @@ interface CheckoutDialogProps {
 export function CheckoutDialog({ isOpen, onClose, onSuccess }: CheckoutDialogProps) {
   const [assetId, setAssetId] = useState("EQX1007");
   const [siteId, setSiteId] = useState("S003");
-  const [operatorId, setOperatorId] = useState("OP102");
+  const [operatorId, setOperatorId] = useState("OP101");
   const [expectedReturnDate, setExpectedReturnDate] = useState("2025-09-15");
   const [initialCondition, setInitialCondition] = useState<"EXCELLENT" | "GOOD" | "FAIR">("EXCELLENT");
   const [dailyCost, setDailyCost] = useState(450);
