@@ -73,9 +73,9 @@ export function TopHeader() {
       </div>
 
       {/* Right: Actions */}
-      <div className="flex items-center gap-2 shrink-0">
+      <div className="flex items-center gap-3 shrink-0">
         {/* Light/Dark Mode Toggle */}
-        <ThemeToggle variant="compact" />
+        <ThemeToggle variant="header" />
 
         {/* Notifications */}
         <DropdownMenu open={notifOpen} onOpenChange={setNotifOpen}>

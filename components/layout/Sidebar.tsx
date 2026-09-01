@@ -21,6 +21,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Logo } from "@/components/ui/Logo";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 interface NavItem {
   href: string;
@@ -213,15 +214,17 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
         </ul>
       </nav>
 
-      {/* ── Collapse toggle ────────────────────────────────── */}
+      {/* ── Footer / Theme & Collapse ─────────────────────── */}
       <div
-        className="border-t border-[var(--border-default)] p-2"
+        className="border-t border-[var(--border-default)] p-2 space-y-1.5"
         style={{ flexShrink: 0 }}
       >
+        <ThemeToggle variant="sidebar" collapsed={collapsed} />
+
         <button
           onClick={onToggle}
           className={cn(
-            "w-full flex items-center justify-center gap-2 py-2 px-3 rounded-md",
+            "w-full flex items-center justify-center gap-2 py-1.5 px-3 rounded-md",
             "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]",
             "hover:bg-[var(--interactive-hover)] transition-colors",
             "text-xs focus-visible:outline-2 focus-visible:outline-[var(--brand-primary)]"
