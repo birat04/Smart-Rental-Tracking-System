@@ -11,4 +11,5 @@ export const OPERATORS: Operator[] = [
   { id: "OP402", name: "Sanjay Sah", role: "Senior Equipment Operator", site: "S001", contact: "s.sah@cat-rental.com" },
   { id: "OP503", name: "Pradeep Shrestha", role: "Equipment Operator", site: "S002", contact: "p.shrestha@cat-rental.com" },
   { id: "OP611", name: "Subkecha Thapa", role: "Lead Operator", site: "S005", contact: "s.thapa@cat-rental.com" },
+  { id: "OP208", name: "Rajan Bhandari", role: "Equipment Operator", site: "S003", contact: "r.bhandari@cat-rental.com" },
 ];

@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export function TopHeader() {
   const [notifOpen, setNotifOpen] = useState(false);
@@ -73,6 +74,8 @@ export function TopHeader() {
 
       {/* Right: Actions */}
       <div className="flex items-center gap-2 shrink-0">
+        {/* Light/Dark Mode Toggle */}
+        <ThemeToggle variant="compact" />
 
         {/* Notifications */}
         <DropdownMenu open={notifOpen} onOpenChange={setNotifOpen}>

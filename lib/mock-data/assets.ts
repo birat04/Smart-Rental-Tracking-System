@@ -350,7 +350,7 @@ export const ASSETS: Asset[] = [
     riskLevel: "LOW",
     siteId: "S003",
     siteName: "Eastfield Construction Hub",
-    operatorId: "OP205",
+    operatorId: "OP208",
     operatorName: "Rajan Bhandari",
     rentalStartDate: "2025-08-18",
     expectedReturnDate: daysFromNow(8),

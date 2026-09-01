@@ -103,7 +103,133 @@
 
 /* ─── CSS CUSTOM PROPERTIES (runtime tokens) ────────────────── */
 :root {
-  /* Surfaces */
+  /* Surfaces (Light Mode) */
+  --surface-base:      #F4F6F8;
+  --surface-primary:   #FFFFFF;
+  --surface-secondary: #FFFFFF;
+  --surface-tertiary:  #F0F3F6;
+  --surface-sidebar:   #F8FAFC;
+  --surface-overlay:   rgba(255,255,255,0.95);
+
+  /* Borders */
+  --border-default:    #D0D7DE;
+  --border-subtle:     #E7ECF0;
+  --border-strong:     #8C959F;
+  --border-accent:     #D97706;
+
+  /* Text */
+  --text-primary:      #1F2328;
+  --text-secondary:    #424A53;
+  --text-tertiary:     #656D76;
+  --text-disabled:     #8C959F;
+  --text-inverse:      #FFFFFF;
+  --text-accent:       #B45309;
+
+  /* Brand */
+  --brand-primary:     #D97706;
+  --brand-hover:       #B45309;
+  --brand-muted:       rgba(217,119,6,0.12);
+  --brand-muted-border:rgba(217,119,6,0.28);
+
+  /* Status — ACTIVE */
+  --status-active-bg:      #EAF8F0;
+  --status-active-border:  #A2E5B5;
+  --status-active-text:    #1A7F37;
+  --status-active-dot:     #2DA44E;
+
+  /* Status — WARNING / IDLE */
+  --status-warning-bg:     #FFF8C5;
+  --status-warning-border: #E3B341;
+  --status-warning-text:   #9A6700;
+  --status-warning-dot:    #D4A72C;
+
+  /* Status — CRITICAL / OVERDUE */
+  --status-critical-bg:     #FFEBE9;
+  --status-critical-border: #FF8182;
+  --status-critical-text:   #CF222E;
+  --status-critical-dot:    #CF222E;
+
+  /* Status — INFO */
+  --status-info-bg:     #DDF4FF;
+  --status-info-border: #54AEFF;
+  --status-info-text:   #0969DA;
+  --status-info-dot:    #0969DA;
+
+  /* Status — NEUTRAL / UNASSIGNED */
+  --status-neutral-bg:     #F6F8FA;
+  --status-neutral-border: #D0D7DE;
+  --status-neutral-text:   #57606A;
+  --status-neutral-dot:    #6E7781;
+
+  /* Interactive */
+  --interactive-hover:  rgba(0,0,0,0.04);
+  --interactive-active: rgba(0,0,0,0.08);
+
+  /* Chart palette */
+  --chart-1: #D97706;
+  --chart-2: #2563EB;
+  --chart-3: #16A34A;
+  --chart-4: #DC2626;
+  --chart-5: #9333EA;
+  --chart-6: #F97316;
+  --chart-7: #06B6D4;
+  --chart-8: #64748B;
+  --chart-historical: #0284C7;
+  --chart-forecast:   #D97706;
+  --chart-confidence: rgba(217,119,6,0.12);
+
+  /* Motion */
+  --duration-fast:   100ms;
+  --duration-base:   150ms;
+  --duration-slow:   250ms;
+  --duration-enter:  200ms;
+  --ease-standard:   cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter:      cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit:       cubic-bezier(0.4, 0, 1, 1);
+
+  /* Shadows */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.08);
+  --shadow-md:  0 2px 8px rgba(0,0,0,0.10);
+  --shadow-lg:  0 4px 16px rgba(0,0,0,0.12);
+  --ring-focus: 0 0 0 2px #D97706;
+
+  /* Layout */
+  --sidebar-width:      240px;
+  --sidebar-collapsed:  60px;
+  --header-height:      56px;
+
+  /* shadcn/ui color tokens */
+  --background: #FFFFFF;
+  --foreground: #1F2328;
+  --card: #FFFFFF;
+  --card-foreground: #1F2328;
+  --popover: #FFFFFF;
+  --popover-foreground: #1F2328;
+  --primary: #D97706;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F3F6;
+  --secondary-foreground: #424A53;
+  --muted: #F0F3F6;
+  --muted-foreground: #656D76;
+  --accent: #F0F3F6;
+  --accent-foreground: #1F2328;
+  --destructive: #CF222E;
+  --border: #D0D7DE;
+  --input: #D0D7DE;
+  --ring: #D97706;
+  --radius: 0.375rem;
+  --sidebar: #F8FAFC;
+  --sidebar-foreground: #424A53;
+  --sidebar-primary: #D97706;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0F3F6;
+  --sidebar-accent-foreground: #1F2328;
+  --sidebar-border: #D0D7DE;
+  --sidebar-ring: #D97706;
+}
+
+.dark {
+  /* Surfaces (Dark Mode) */
   --surface-base:      #0A0C0F;
   --surface-primary:   #111418;
   --surface-secondary: #1C2128;
@@ -166,11 +292,11 @@
   --interactive-active: rgba(255,255,255,0.08);
 
   /* Chart palette */
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --chart-1: #F5B800;
+  --chart-2: #38BDF8;
+  --chart-3: #34D399;
+  --chart-4: #F87171;
+  --chart-5: #C084FC;
   --chart-6: #F97316;
   --chart-7: #06B6D4;
   --chart-8: #8B949E;
@@ -178,27 +304,13 @@
   --chart-forecast:   #F5B800;
   --chart-confidence: rgba(245,184,0,0.10);
 
-  /* Motion */
-  --duration-fast:   100ms;
-  --duration-base:   150ms;
-  --duration-slow:   250ms;
-  --duration-enter:  200ms;
-  --ease-standard:   cubic-bezier(0.2, 0, 0, 1);
-  --ease-enter:      cubic-bezier(0, 0, 0.2, 1);
-  --ease-exit:       cubic-bezier(0.4, 0, 1, 1);
-
   /* Shadows */
   --shadow-sm:  0 1px 2px rgba(0,0,0,0.4);
   --shadow-md:  0 2px 8px rgba(0,0,0,0.5);
   --shadow-lg:  0 4px 16px rgba(0,0,0,0.6);
   --ring-focus: 0 0 0 2px #F5B800;
 
-  /* Layout */
-  --sidebar-width:      240px;
-  --sidebar-collapsed:  60px;
-  --header-height:      56px;
-
-  /* ── shadcn/ui color overrides → our dark industrial palette ── */
+  /* shadcn/ui color tokens */
   --background: #111418;
   --foreground: #F0F6FC;
   --card: #1C2128;
@@ -217,7 +329,6 @@
   --border: #30363D;
   --input: #21262D;
   --ring: #F5B800;
-  --radius: 0.375rem;
   --sidebar: #161B22;
   --sidebar-foreground: #B1BAC4;
   --sidebar-primary: #F5B800;

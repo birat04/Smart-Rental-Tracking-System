@@ -4,6 +4,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryProvider } from "@/components/providers/QueryProvider";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Smart Rental Intelligence | Caterpillar",
@@ -23,26 +24,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <QueryProvider>
-          <TooltipProvider delay={300}>
-            <AppShell>
-              {children}
-            </AppShell>
-            <Toaster
-              position="bottom-right"
-              toastOptions={{
-                style: {
-                  background: "var(--surface-secondary)",
-                  border: "1px solid var(--border-default)",
-                  color: "var(--text-primary)",
-                  fontSize: "0.875rem",
-                },
-              }}
-            />
-          </TooltipProvider>
-        </QueryProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <QueryProvider>
+            <TooltipProvider delay={300}>
+              <AppShell>
+                {children}
+              </AppShell>
+              <Toaster
+                position="bottom-right"
+                toastOptions={{
+                  style: {
+                    background: "var(--surface-secondary)",
+                    border: "1px solid var(--border-default)",
+                    color: "var(--text-primary)",
+                    fontSize: "0.875rem",
+                  },
+                }}
+              />
+            </TooltipProvider>
+          </QueryProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

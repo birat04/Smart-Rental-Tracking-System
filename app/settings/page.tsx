@@ -1,6 +1,5 @@
-"use client";
-
-import { Settings, Sliders, Shield, Bell, Database, Radio } from "lucide-react";
+import { Settings, Sliders, Shield, Bell, Database, Radio, Sun } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export default function SettingsPage() {
   return (
@@ -16,6 +15,25 @@ export default function SettingsPage() {
       </div>
 
       <div className="space-y-4">
+        {/* Appearance & Color Theme */}
+        <div
+          className="p-5 rounded-md border border-[var(--border-default)] space-y-4"
+          style={{ background: "var(--surface-secondary)" }}
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Sun size={16} className="text-[var(--brand-primary)]" />
+              <h2 className="text-sm font-bold text-[var(--text-primary)]">
+                Appearance & Color Theme
+              </h2>
+            </div>
+            <span className="text-[11px] text-[var(--text-tertiary)]">
+              Caterpillar Safety High-Contrast & Dark Mode
+            </span>
+          </div>
+          <ThemeToggle variant="select" />
+        </div>
+
         {/* Telemetry Polling */}
         <div
           className="p-5 rounded-md border border-[var(--border-default)] space-y-4"
