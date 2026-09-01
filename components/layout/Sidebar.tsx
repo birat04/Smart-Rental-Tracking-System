@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Logo } from "@/components/ui/Logo";
 
 interface NavItem {
   href: string;
@@ -150,37 +151,15 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
       {/* ── Brand ─────────────────────────────────────────── */}
       <div
         className={cn(
-          "flex items-center gap-3 px-3 border-b",
-          "border-[var(--border-default)]"
+          "flex items-center px-3 border-b",
+          "border-[var(--border-default)]",
+          collapsed ? "justify-center" : "justify-start"
         )}
         style={{ height: "var(--header-height)", flexShrink: 0 }}
       >
-        <div
-          className="flex items-center justify-center rounded-sm shrink-0"
-          style={{
-            width: 28,
-            height: 28,
-            background: "var(--brand-primary)",
-          }}
-        >
-          <Zap size={14} color="#0A0C0F" strokeWidth={2.5} />
-        </div>
-        {!collapsed && (
-          <div className="flex flex-col min-w-0">
-            <span
-              className="font-bold leading-tight text-[var(--text-primary)] truncate"
-              style={{ fontSize: "0.8125rem" }}
-            >
-              SMART RENTAL
-            </span>
-            <span
-              className="text-[var(--text-tertiary)] truncate"
-              style={{ fontSize: "0.625rem", letterSpacing: "0.12em" }}
-            >
-              INTELLIGENCE
-            </span>
-          </div>
-        )}
+        <Link href="/dashboard" className="flex items-center gap-2 focus:outline-none">
+          <Logo size="md" showText={!collapsed} animate />
+        </Link>
       </div>
 
       {/* ── Live indicator ─────────────────────────────────── */}

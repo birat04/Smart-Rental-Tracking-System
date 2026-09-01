@@ -30,7 +30,7 @@ export default function SettingsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
             <div className="p-3 rounded border border-[var(--brand-muted-border)] bg-[var(--brand-muted)] text-[var(--brand-primary)]">
               <span className="font-bold block">Real-time Fast (5s)</span>
-              <span className="text-[10px] opacity-80">Ideal for hackathon demo flow</span>
+              <span className="text-[10px] opacity-80">High-frequency live simulation</span>
             </div>
             <div className="p-3 rounded border border-[var(--border-default)] bg-[var(--surface-primary)] text-[var(--text-secondary)]">
               <span className="font-bold block">Operational (60s)</span>

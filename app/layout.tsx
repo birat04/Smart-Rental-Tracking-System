@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     "Caterpillar Smart Rental Tracking System — Real-time fleet visibility, demand forecasting, and AI-powered operational recommendations for heavy equipment rental operations.",
   keywords: ["Caterpillar", "rental tracking", "fleet management", "heavy equipment", "operations intelligence"],
+  icons: {
+    icon: "/cat-rental-logo.svg",
+    shortcut: "/cat-rental-logo.svg",
+    apple: "/cat-rental-logo.svg",
+  },
 };
 
 export default function RootLayout({
